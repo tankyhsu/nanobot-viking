@@ -1,0 +1,17 @@
+{
+  "embedding": {
+    "dense": {
+      "api_base": "https://api.siliconflow.cn/v1",
+      "api_key": "YOUR_API_KEY",
+      "provider": "openai",
+      "dimension": 1024,
+      "model": "BAAI/bge-m3"
+    }
+  },
+  "vlm": {
+    "api_base": "https://api.siliconflow.cn/v1",
+    "api_key": "YOUR_API_KEY",
+    "provider": "openai",
+    "model": "deepseek-ai/DeepSeek-OCR"
+  }
+}
