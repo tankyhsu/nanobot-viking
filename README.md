@@ -4,6 +4,12 @@
 
 [OpenViking](https://github.com/pinkponk/openviking) knowledge base integration for [nanobot](https://github.com/pinkponk/nanobot). Adds semantic search, RAG context augmentation, and knowledge management APIs to your nanobot deployment.
 
+## Screenshots
+
+| Web Console Integration |
+|------------------------|
+| ![nanobot Web Console Knowledge Base Integration](screenshots/01-web-console-integration.png) |
+
 ## What it does
 
 - **RAG Augmentation** — Automatically retrieves relevant knowledge base context and injects it into user messages before they reach the LLM, improving answer quality

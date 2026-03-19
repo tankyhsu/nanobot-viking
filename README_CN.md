@@ -4,6 +4,12 @@
 
 为 [nanobot](https://github.com/pinkponk/nanobot) 集成 [OpenViking](https://github.com/pinkponk/openviking) 知识库。为你的 nanobot 部署添加语义搜索、RAG 上下文增强和知识管理 API。
 
+## 截图
+
+| Web Console 集成 |
+|----------------|
+| ![nanobot Web Console 知识库集成](screenshots/01-web-console-integration.png) |
+
 ## 功能
 
 - **RAG 上下文增强** — 自动检索知识库中的相关内容，注入到用户消息中再发给 LLM，提升回答质量
