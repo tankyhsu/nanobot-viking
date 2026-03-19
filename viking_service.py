@@ -168,6 +168,13 @@ class VikingService:
             lines.append(f"  [{marker}] {name} ({size}b)")
         return f"目录 {uri}:\n" + "\n".join(lines)
 
+    def _delete_resource(self, uri: str) -> str:
+        try:
+            result = self._ov.rm(uri)
+            return f"已删除: {uri}"
+        except Exception as e:
+            return f"删除失败: {e}"
+
     def _read(self, uri: str) -> str:
         try:
             content = self._ov.read(uri)
@@ -225,6 +232,10 @@ class VikingService:
     async def add_resource(self, path: str) -> str:
         result = await self.run_async(self._add_resource, path, timeout=120)
         return result or "添加资源超时"
+
+    async def delete_resource(self, uri: str) -> str:
+        result = await self.run_async(self._delete_resource, uri, timeout=30)
+        return result or "删除超时"
 
     async def ls(self, uri: str = "viking://resources/") -> str:
         result = await self.run_async(self._ls, uri, timeout=15)

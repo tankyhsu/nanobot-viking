@@ -77,14 +77,11 @@ Create `~/.openviking/ov.conf` (see [examples/ov.conf.example](examples/ov.conf.
 
 Both are available on [SiliconFlow](https://siliconflow.cn) — see [Free Models](#siliconflow-free-models) section below.
 
-### 3. Copy files to your nanobot-api directory
+### 3. Use with nanobot-web-console (recommended)
 
-```bash
-cp viking_service.py viking_routes.py /path/to/your/nanobot-api/
-cp viking_cli.py /usr/local/bin/viking && chmod +x /usr/local/bin/viking
-```
+If you're using [nanobot-web-console](https://github.com/tankyhsu/nanobot-web-console), just `pip install openviking` — no file copying needed. The server auto-detects openviking on startup and enables all knowledge base features automatically.
 
-### 4. Integrate into your server
+### 4. Integrate into your own server
 
 ```python
 from viking_service import VikingService

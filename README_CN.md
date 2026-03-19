@@ -77,14 +77,11 @@ pip install openviking
 
 两个模型在 [SiliconFlow（硅基流动）](https://siliconflow.cn) 上均可**免费使用**。也支持 OpenAI、Azure 或任何 OpenAI 兼容 API。
 
-### 3. 部署
+### 3. 与 nanobot-web-console 集成（推荐）
 
-```bash
-cp viking_service.py viking_routes.py /path/to/your/nanobot-api/
-cp viking_cli.py /usr/local/bin/viking && chmod +x /usr/local/bin/viking
-```
+如果你使用 [nanobot-web-console](https://github.com/tankyhsu/nanobot-web-console)，只需 `pip install openviking`，无需复制任何文件。服务启动时自动检测 openviking，所有知识库功能即刻可用。
 
-### 4. 集成到服务
+### 4. 集成到自己的服务
 
 ```python
 from viking_service import VikingService
