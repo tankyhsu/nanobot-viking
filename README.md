@@ -85,7 +85,14 @@ Both are available on [SiliconFlow](https://siliconflow.cn) — see [Free Models
 
 ### 3. Use with nanobot-web-console (recommended)
 
-If you're using [nanobot-web-console](https://github.com/tankyhsu/nanobot-web-console), just `pip install openviking` — no file copying needed. The server auto-detects openviking on startup and enables all knowledge base features automatically.
+```bash
+pip install nanobot-ai
+pip install nanobot-web-console
+pip install openviking
+nanobot-console
+```
+
+That's it — `nanobot-console` auto-detects OpenViking on startup and enables all knowledge base features. No file copying needed.
 
 ### 4. Integrate into your own server
 
@@ -199,7 +206,7 @@ After an unclean shutdown, stale AGFS processes may prevent Viking from initiali
 
 ```bash
 killall agfs-server
-systemctl restart nanobot-api
+# Then restart nanobot-console (or systemctl restart nanobot-api if running as a service)
 ```
 
 ## SiliconFlow Free Models
